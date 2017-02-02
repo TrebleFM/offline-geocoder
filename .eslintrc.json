@@ -1,0 +1,7 @@
+{
+    "extends": "@treblefm",
+    "rules": {
+        "no-console": 0,
+        "sort-imports": 0
+    }
+}

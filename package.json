@@ -1,15 +1,24 @@
 {
-  "name": "offline-geocoder",
-  "version": "0.0.1",
-  "description": "",
+  "name": "@treblefm/offline-geocoder",
+  "version": "1.0.0",
   "main": "src/index.js",
+  "engines": {
+    "node": ">=4"
+  },
   "dependencies": {
     "sqlite3": "^3.1.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luca Spiller",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@treblefm/eslint-config": "^1.4.0",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.14.1",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-node": "^3.0.5"
+  }
 }
