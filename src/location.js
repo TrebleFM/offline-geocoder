@@ -29,7 +29,6 @@ function format(result) {
     };
 }
 
-
 function find(geocoder, locationId) {
     return new Promise((resolve, reject) => {
         const query = "SELECT * FROM everything WHERE id = $id LIMIT 1";

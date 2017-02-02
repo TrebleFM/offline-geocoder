@@ -12,11 +12,11 @@ if (args.length !== 2) {
 
 const geocoder = new Geocoder({ database: `${__dirname}/../data/db.sqlite` });
 geocoder.reverse(args[0], args[1])
-  .then(function (result) {
-      console.log(result);
-      process.exit(0);
-  })
-  .catch(function (error) {
-      console.error(error);
-      process.exit(1);
-  });
+    .then((result) => {
+        console.log(JSON.stringify(result, null, 2));
+        process.exit(0);
+    })
+    .catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });

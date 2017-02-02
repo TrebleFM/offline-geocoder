@@ -2,7 +2,7 @@
 
 const sqlite3 = require("sqlite3");
 const reverse = require("./reverse");
-const findLocation = require("./location").find;
+const find = require("./location").find;
 
 const Geocoder = function (options) {
     this.options = options || {};
@@ -25,7 +25,7 @@ Geocoder.prototype.reverse = function (latitude, longitude) {
 
 Geocoder.prototype.location = function () {
     return {
-        find: (locationId) => findLocation(this, locationId)
+        find: (locationId) => find(this, locationId)
     };
 };
 
