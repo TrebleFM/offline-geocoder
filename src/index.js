@@ -11,7 +11,12 @@ const Geocoder = function (options) {
         this.options.database = `${__dirname}/../data/db.sqlite`;
     }
 
-    this.db = new sqlite3.Database(this.options.database);
+    this.db = new sqlite3.Database(this.options.database, sqlite3.OPEN_READONLY, (err) => {
+        if (err) {
+            err.message = `Failed to open ${this.options.database}\n${(err.message || "")}`;
+            throw err;
+        }
+    });
 };
 
 Geocoder.prototype.reverse = function (latitude, longitude) {
