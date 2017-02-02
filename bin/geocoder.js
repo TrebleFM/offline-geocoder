@@ -10,7 +10,7 @@ if (args.length !== 2) {
     process.exit(1);
 }
 
-const geocoder = new Geocoder({ database: `${__dirname}/../db.sqlite` });
+const geocoder = new Geocoder({ database: `${__dirname}/../data/db.sqlite` });
 geocoder.reverse(args[0], args[1])
   .then(function (result) {
       console.log(result);
