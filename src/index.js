@@ -1,6 +1,6 @@
 "use strict";
 
-const sqlite3 = require("sqlite3").verbose();
+const sqlite3 = require("sqlite3");
 const reverse = require("./reverse");
 const findLocation = require("./location").find;
 
