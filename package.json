@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "eslint '**/*.js'",
-    "postinstall": "cd data && ../scripts/postinstall.sh",
-    "generate": "cd data && ../scripts/generate.sh"
+    "postinstall": "mkdir -p data && cd data && ../scripts/postinstall.sh",
+    "generate": "mkdir -p data && cd data && ../scripts/generate.sh"
   },
   "author": "Luca Spiller",
   "license": "MIT",
