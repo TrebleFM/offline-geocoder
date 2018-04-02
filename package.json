@@ -1,6 +1,6 @@
 {
   "name": "@swayam18/offline-geocoder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "engines": {
     "node": ">=4"
@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "eslint '**/*.js'",
-    "postinstall": "mkdir -p data && cd data && source ../scripts/postinstall.sh",
-    "generate": "mkdir -p data && cd data && source ../scripts/generate.sh"
+    "postinstall": "mkdir -p data && cd data && . ../scripts/postinstall.sh",
+    "generate": "mkdir -p data && cd data && . ../scripts/generate.sh"
   },
   "author": "Luca Spiller",
   "license": "MIT",
