@@ -12,7 +12,35 @@ const format = require("./location").format;
 // different at the poles vs the equator.
 //
 // Based upon http://stackoverflow.com/a/7261601/155715
+const Singapore = {
+    formatted: "Singapore, Central Singapore, Singapore",
+
+        city: {
+            id: 1880252,
+            name: "Singapore"
+        },
+        region: {
+            id: 1,
+            name: "Singapore"
+        },
+        country: {
+            id: "SG",
+            name: "Singapore"
+        },
+
+        coordinates: {
+            latitude: 1.28967,
+            longitude: 103.85007
+        }
+}
 module.exports = function Reverse(geocoder, latitude, longitude) {
+    // hardcode Singapore
+    if (latitude > 1.2113 && latitude < 1.4653 && longitude > 103.524 && longitude < 104.0265) {
+        return new Promise((resolve) => {
+            resolve(Singapore);
+        });
+    }
+
     const scale = Math.pow(Math.cos(latitude * Math.PI / 180), 2);
 
     return new Promise((resolve, reject) => {
